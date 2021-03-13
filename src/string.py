@@ -33,6 +33,7 @@ len(word)  # size of word
 year = 2020
 event = "corona"
 print(f'Results of the {year} {event}')
+print('event is %s' % event)
 
 string1, string2, string3 = '', 'Trondheim', 'Hammer Dance'
 string1 or string2 or string3  #'Trondheim'
