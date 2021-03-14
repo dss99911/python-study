@@ -1,4 +1,6 @@
 import logging
+log = logging.getLogger(__name__)
+log.debug("with logger")
 logging.debug('Debugging information')
 logging.info('Informational message')
 logging.warning('Warning:config file %s not found', 'server.conf')

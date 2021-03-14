@@ -40,3 +40,6 @@ while a < 10:
 # pass do nothing. if there is nothing to do on block. use 'pass' not to do anything
 while True:
     pass  # Busy-wait for keyboard interrupt (Ctrl+C)
+
+# for to array
+[f"test{i}" for i in [1, 2]]

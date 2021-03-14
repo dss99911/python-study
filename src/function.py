@@ -1,26 +1,29 @@
-def printme(text):
+def print_me(text):
     """This prints a passed string into this function"""
     print(text)
     return
 
 
-printme("dd")
-printme(text="My string")
+print_me("dd")
+print_me(text="My string")
 
 
-def printInfo(name, age=35):
+def print_info(name, age=35):
     """This prints a passed info into this function"""
     print("Name: ", name)
     print("Age ", age)
     return
 
 
-def withTypeStr(name: str):
-    print(name)
-def withTypeDict(name: dict):
+def with_type_str(name: str):
     print(name)
 
-def printInfo2(arg1, *vartuple):
+
+def with_type_dict(name: dict):
+    print(name)
+
+
+def print_info2(arg1, *vartuple):
     """This prints a variable passed arguments"""
     print("Output is: ")
     print(arg1)
@@ -30,7 +33,7 @@ def printInfo2(arg1, *vartuple):
     return
 
 
-printInfo2(70, 60, 50)
+print_info2(70, 60, 50)
 
 
 def initlog(*args):
