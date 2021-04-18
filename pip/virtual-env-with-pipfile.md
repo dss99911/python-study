@@ -18,3 +18,13 @@ pipenv update
 ```shell
 pipenv lock
 ```
+
+### activate 
+```shell
+pipenv shell
+```
+
+### install for dev env
+```shell
+pip install <package> --dev
+```
