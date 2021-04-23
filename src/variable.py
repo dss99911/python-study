@@ -7,6 +7,8 @@ name = "John"  # A string
 a = b = c = 1
 a2, b2, c2 = 1, 2, "john"
 
+a = None # null
+
 # delete variable
 del a, b, c
 

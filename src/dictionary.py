@@ -9,6 +9,10 @@ print(dict_.values())  # Prints all the values
 
 list(dict_)  # ['one', 2]
 
+#get or None
+if dict_.get('ddd') is None:
+    print("dddd")
+
 # del dict['one']  # remove entry with key 'one'
 # dict.clear()  # remove all entries in dict
 # del dict
@@ -29,3 +33,4 @@ questions = ['name', 'quest', 'favorite color']
 answers = ['lancelot', 'the holy grail', 'blue']
 for q, a in zip(questions, answers):
     print('What is your {0}?  It is {1}.'.format(q, a))
+

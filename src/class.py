@@ -48,6 +48,11 @@ print(john.__class__)  # <class '__main__.Employee'>
 print(john.__dir__())  # <class '__main__.Employee'>. same with dir(john)
 
 
+# toString()
+class ToString:
+        def __str__(self):
+            return "this is string object"
+
 # custom iteration
 
 class Reverse:

@@ -54,3 +54,5 @@ matrix = [
 ]
 print([[row[i] for row in matrix] for i in range(4)])
 # transposed [[1, 5, 9], [2, 6, 10], [3, 7, 11], [4, 8, 12]]
+
+
