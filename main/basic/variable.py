@@ -7,7 +7,7 @@ name = "John"  # A string
 a = b = c = 1
 a2, b2, c2 = 1, 2, "john"
 
-a = None # null
+a = None  # null
 
 # delete variable
 del a, b, c
@@ -22,11 +22,10 @@ def sum2(arg1, arg2):
 total2 = 0  # This is global variable.
 
 # Refer Global variable
-
 Money = 2000
 
 
-def addMoney():
+def accessGlobalVariable():
     global Money
     Money = Money + 1
 

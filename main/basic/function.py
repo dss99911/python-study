@@ -36,13 +36,13 @@ def print_info2(arg1, *vartuple):
 print_info2(70, 60, 50)
 
 
-def initlog(*args):
+def var_args(*args):
     """Define function later with"""
     pass  # TODO : Remember to implement this!
 
 
 # function can be set on other variable
-a = initlog
+a = var_args
 a("1")
 
 
