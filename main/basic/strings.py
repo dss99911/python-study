@@ -10,6 +10,9 @@ Usage: thingy [OPTIONS]
      -H hostname               Hostname to connect to
 """)
 
+# convert to bytes
+b"ddd"
+
 print(3 * 'un' + 'ium')  # unununium
 
 print('Py' 'thon')  # Python (automatically concatenated)
