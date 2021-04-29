@@ -1,3 +1,13 @@
+def filter():
+    numbers = [1, 2, 3, 4]
+    def less_than_three(number): return number < 3
+
+    filtered_numbers = list(filter(less_than_three, numbers))
+    filtered_numbers = list(filter(lambda n: n < 3, numbers))
+
+    print(filtered_numbers)
+
+
 squares = [1, 4, 9, 16, 25]
 
 print(1 in squares)

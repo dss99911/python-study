@@ -1,19 +1,23 @@
-
 # For in
 words = ['cat', 'window', 'defenestrate']
 for w in words:
     print(w, len(w))
 
-# For with index
-a = ['Mary', 'had', 'a', 'little', 'lamb']
-for i in range(len(a)):
-    print(i, a[i])
 
-for i, v in enumerate(['tic', 'tac', 'toe']):
-    print(i, v)
-#0 tic
-#1 tac
-#2 toe
+# For with index
+def for_index():
+    a = ['Mary', 'had', 'a', 'little', 'lamb']
+    for i in range(len(a)):
+        print(i, a[i])
+
+
+def for_index_enumerate():
+    for i, v in enumerate(['tic', 'tac', 'toe']):
+        print(i, v)
+    # 0 tic
+    # 1 tac
+    # 2 toe
+
 
 # Ignore value
 for _ in range(10):
@@ -23,7 +27,7 @@ for _ in range(10):
 for n in range(2, 10):
     for x in range(2, n):
         if n % x == 0:
-            print(n, 'equals', x, '*', n//x)
+            print(n, 'equals', x, '*', n // x)
             break
         if True:  # just show continue
             continue
@@ -35,7 +39,7 @@ for n in range(2, 10):
 a, b = 0, 1
 while a < 10:
     print(a)
-    a, b = b, a+b
+    a, b = b, a + b
 
 # pass do nothing. if there is nothing to do on block. use 'pass' not to do anything
 while True:

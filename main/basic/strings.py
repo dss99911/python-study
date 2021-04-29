@@ -1,3 +1,9 @@
+
+def strips():
+      print("/sdf/".rstrip("/"))
+      print("/sdf/".lstrip("/"))
+      print("/sdf/".strip("/"))
+
 # print new line
 print('C:\some\name')
 
@@ -12,6 +18,9 @@ Usage: thingy [OPTIONS]
 
 # convert to bytes
 b"ddd"
+
+# unicode
+u"asdf"
 
 print(3 * 'un' + 'ium')  # unununium
 
@@ -48,3 +57,5 @@ print(repr("hello\n")) # "'hello\n'", representation. the string interpretor und
 message = "dsfsd  "
 message = message.lower()
 message = message.strip()
+
+
