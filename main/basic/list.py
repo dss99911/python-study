@@ -21,6 +21,8 @@ squares.extend(squares)  # append list
 squares[2:3] = [1, 2, 3, 4]  # Change 2-3 with the list
 squares[:] = []  # clear
 
+multiply_single_value = [5] * 10
+
 # tuple : similar with list but read-only
 tuple = 'abcd', 786, 2.23, 'john', 70.2
 tinytuple = (123, 'john')
