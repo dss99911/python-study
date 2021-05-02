@@ -1,8 +1,29 @@
-
 def strips():
-      print("/sdf/".rstrip("/"))
-      print("/sdf/".lstrip("/"))
-      print("/sdf/".strip("/"))
+    print("/sdf/".rstrip("/"))
+    print("/sdf/".lstrip("/"))
+    print("/sdf/".strip("/"))
+
+
+def split():
+    a = "abc def\nadsf"
+    a = a.split()  # split any whitespace
+    print(a)
+    a = "abc,def,adsf"
+    a = a.split(",")
+    print(a)
+
+
+def replace():
+    a = "abc 123".replace("1", "2")
+    print(a)
+
+
+def float_or_none(text: str):
+    try:
+        return float(text)
+    except ValueError:
+        return None
+
 
 # print new line
 print('C:\some\name')
@@ -48,14 +69,14 @@ print(f'Results of the {year} {event}')
 print('event is %s' % event)
 
 string1, string2, string3 = '', 'Trondheim', 'Hammer Dance'
-string1 or string2 or string3  #'Trondheim'
+string1 or string2 or string3  # 'Trondheim'
 
-print(repr("hello\n")) # "'hello\n'", representation. the string interpretor understand
-
+print(repr("hello\n"))  # "'hello\n'", representation. the string interpretor understand
 
 ### Methods
 message = "dsfsd  "
 message = message.lower()
 message = message.strip()
 
-
+if __name__ == '__main__':
+    replace()

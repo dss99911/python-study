@@ -8,6 +8,20 @@ def filter():
     print(filtered_numbers)
 
 
+def merge_list():
+    a = [1, 2, 3] + [4, 5, 6]
+    print(a)
+
+
+def zips():
+    a, b = [1, 2, 3], [4, 5, 6]
+    result = set(zip(a, b))
+
+    print(f"result : {result}")
+    a_unzip, b_unzip = zip(*result)
+    print(f"a = {a_unzip}, b = {b_unzip}")
+
+
 squares = [1, 4, 9, 16, 25]
 
 print(1 in squares)
@@ -68,3 +82,6 @@ matrix = [
 ]
 print([[row[i] for row in matrix] for i in range(4)])
 # transposed [[1, 5, 9], [2, 6, 10], [3, 7, 11], [4, 8, 12]]
+
+if __name__ == '__main__':
+    zips()

@@ -33,3 +33,4 @@ def accessGlobalVariable():
 # show global or local variables
 globals()
 locals()
+
