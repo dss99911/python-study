@@ -16,3 +16,12 @@ elif a == 200:
         print("e")
 else:
     print("b")
+
+
+# ternary operator
+def ternary_operator():
+    return "success" if (b) else "fail"
+
+
+if __name__ == '__main__':
+    print(ternary_operator())

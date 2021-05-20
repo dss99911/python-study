@@ -5,7 +5,10 @@ parser.add_argument("-d", "--decimal", dest="decimal", action="store")  # extra 
 parser.add_argument("-f", "--fast", dest="fast", action="store_true")  # existence/nonexistence
 args = parser.parse_args()
 
-print(args.decimal)
-print(args.fast)
+
 # 1
 # True
+
+if __name__ == '__main__':
+    print(args.decimal)
+    print(args.fast)
