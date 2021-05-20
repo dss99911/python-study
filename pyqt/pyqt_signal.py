@@ -1,6 +1,6 @@
 import sys
 
-from PySide6.QtWidgets import *
+from qt import *
 
 
 def run_ui(app):

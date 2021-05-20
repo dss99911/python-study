@@ -1,7 +1,4 @@
-import sys
-
-from PySide6.QtCore import Qt
-from PySide6.QtWidgets import QApplication, QLabel, QPushButton, QMessageBox
+from qt import *
 
 
 def run_label(app):
@@ -26,4 +23,5 @@ def run_message_box(app):
 
 if __name__ == '__main__':
     app = QApplication([])
+    run_label(app)
     run_message_box(app)

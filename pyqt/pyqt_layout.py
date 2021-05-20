@@ -1,6 +1,4 @@
-import sys
-
-from PySide6.QtWidgets import QApplication, QWidget, QPushButton, QVBoxLayout
+from qt import *
 
 
 def vertical_layout():

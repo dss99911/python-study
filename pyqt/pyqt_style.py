@@ -1,12 +1,7 @@
-import sys
-
-from PySide6.QtCore import Qt
-from PySide6.QtGui import QPalette, QColor
-from PySide6.QtWidgets import QApplication, QPushButton
+from qt import *
 
 
 # 'Fusion', 'Windows', 'WindowsVista' (Windows only) and 'Macintosh' (Mac only).
-
 
 def set_style(app):
     app.setStyle('Fusion')

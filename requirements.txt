@@ -7,6 +7,9 @@ idna==3.1
 multidict==5.1.0
 numpy==1.20.2
 pandas==1.2.4
+PyQt6==6.1.0
+PyQt6-Qt6==6.1.0
+PyQt6-sip==13.1.0
 PySide6==6.1.0
 python-dateutil==2.8.1
 pytz==2021.1
