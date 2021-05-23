@@ -1,27 +1,21 @@
 from qt import *
 
 
-def run_label(app):
+def setup_label(app):
     # label = QLabel('Hello World!')
-    label = QLabel('Hello World!', alignment=Qt.AlignCenter)
-    label.show()
-    app.exec()
+    return QLabel('Hello World!', alignment=Qt.AlignCenter)
 
 
-def run_button(app):
-    button = QPushButton('Click')
-    button.show()
-    app.exec()
+def setup_button(app):
+    return QPushButton('Click')
 
 
-def run_message_box(app):
+def setup_message_box(app):
     alert = QMessageBox()
     alert.setText('You clicked the button!')
-    alert.exec()  # pause here until user close the message box
-    sys.exit(app.exec())
+    # alert.exec()  # pause here until user close the message box
+    return alert
 
 
 if __name__ == '__main__':
-    app = QApplication([])
-    run_label(app)
-    run_message_box(app)
+    run_ui(setup_message_box)

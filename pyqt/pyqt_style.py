@@ -42,13 +42,12 @@ def style_dark_fusion(app):
     app.setStyleSheet("QToolTip { color: #ffffff; background-color: #2a82da; border: 1px solid white; }")
 
 
-def show_ui(app):
+def setup_ui(app):
+    style_dark_fusion(app)
     button = QPushButton('Hello World')
-    button.show()
-    sys.exit(app.exec())
+    return button
+
 
 
 if __name__ == '__main__':
-    app = QApplication([])
-    style_dark_fusion(app)
-    show_ui(app)
+    run_ui(setup_ui)

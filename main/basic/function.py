@@ -95,4 +95,14 @@ def greet_me(**kwargs):
 
 greet_me(name="yasoob")
 greet_me(**{"name": "yasoob"})
+
+
 # name = yasoob
+
+# %%
+def tuple_return():
+    return 1, 2, 3
+    # return (1, 2, 3)
+
+
+a1, a2, a3 = tuple_return()

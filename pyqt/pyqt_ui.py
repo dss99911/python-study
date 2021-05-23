@@ -1,16 +1,10 @@
 from qt import *
 
 
-def run_ui():
-    app = QApplication(sys.argv)
+def setup_ui(app):
     window = load_ui("ui/main_dialog.ui")
-    setup_ui(window)
-    window.show()
-    sys.exit(app.exec())
-
-
-def setup_ui(window):
     window.pushButton.clicked.connect(click_test)
+    return window
 
 
 @Slot()
@@ -19,4 +13,4 @@ def click_test():
 
 
 if __name__ == '__main__':
-    run_ui()
+    run_ui(setup_ui)

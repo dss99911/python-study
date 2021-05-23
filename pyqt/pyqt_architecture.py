@@ -17,6 +17,7 @@ class MyWidget(QWidget):
         self.layout.addWidget(self.button)
 
         self.button.clicked.connect(self.magic)
+        self.resize(800, 600)
 
     @Slot()
     def magic(self):
@@ -24,10 +25,4 @@ class MyWidget(QWidget):
 
 
 if __name__ == "__main__":
-    app = QApplication([])
-
-    widget = MyWidget()
-    widget.resize(800, 600)
-    widget.show()
-
-    sys.exit(app.exec())
+    run_ui(lambda app: MyWidget())

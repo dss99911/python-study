@@ -1,16 +1,14 @@
 from qt import *
 
 
-def vertical_layout():
-    app = QApplication([])
+def vertical_layout(app):
     window = QWidget()
     layout = QVBoxLayout()
     layout.addWidget(QPushButton('Top'))
     layout.addWidget(QPushButton('Bottom'))
     window.setLayout(layout)
-    window.show()
-    sys.exit(app.exec())
+    return window
 
 
 if __name__ == '__main__':
-    vertical_layout()
+    run_ui(vertical_layout)

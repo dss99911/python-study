@@ -24,10 +24,4 @@ class Form(QDialog):
 
 
 if __name__ == '__main__':
-    # Create the Qt Application
-    app = QApplication(sys.argv)
-    # Create and show the form
-    form = Form()
-    form.show()
-    # Run the main Qt loop
-    sys.exit(app.exec())
+    run_ui(lambda app: Form())
