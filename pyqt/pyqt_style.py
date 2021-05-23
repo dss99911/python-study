@@ -1,6 +1,6 @@
 from qt import *
 
-
+# style doc : https://doc.qt.io/qtforpython/tutorials/basictutorial/widgetstyling.html
 # 'Fusion', 'Windows', 'WindowsVista' (Windows only) and 'Macintosh' (Mac only).
 
 def set_style(app):

@@ -1,0 +1,3 @@
+#!/bin/bash
+#Make this file executable (chmod +x file-path)
+/Users/hyun.kim/anaconda3/bin/pyside6-uic $1 > $2

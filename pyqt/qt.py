@@ -6,7 +6,8 @@ if 'PyQt6' in sys.modules:
     from PyQt6.QtCore import pyqtSignal as Signal, pyqtSlot as Slot, Qt
     from PyQt6.QtWidgets import *
     from PyQt6.QtGui import *
-
+    from PyQt6.QtQuick import QQuickView
+    from PyQt6.QtCore import QUrl
 
     def load_ui(ui_file):
         return uic.loadUi(ui_file)
@@ -19,6 +20,8 @@ else:
     from PySide6.QtWidgets import *
     from PySide6.QtGui import *
     from PySide6.QtUiTools import QUiLoader
+    from PySide6.QtQuick import QQuickView
+    from PySide6.QtCore import QUrl
 
     loader = None
 
