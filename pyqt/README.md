@@ -20,6 +20,7 @@ pip install PySide6
 ```
 
 ## Qt Designer
+- [Qt Designer Manual](https://doc.qt.io/qt-5/qtdesigner-manual.html)
 ```shell
 pyside6-designer
 pyside6-designer <file-path>
@@ -81,7 +82,6 @@ https://doc.qt.io/qtforpython/tutorials/basictutorial/uifiles.html
 
 ## Reference
 - [x] [PyQt6, PySide6 Difference](https://www.mfitzp.com/blog/pyqt6-vs-pyside6/)
-
 - [ ] [tutorial3](https://www.mfitzp.com/courses/pyqt/)
 - [ ] [examples](https://github.com/pyqt/examples)
 - [ ] [examples2](https://github.com/learnpyqt/15-minute-apps)
@@ -95,12 +95,8 @@ https://doc.qt.io/qtforpython/tutorials/basictutorial/uifiles.html
 ## Korean Reference
 - [ ] [Tutorial for PyQt5](https://wikidocs.net/37456)
 - [ ] [tutorial for PySide2](https://wikidocs.net/35742)
-  - 한국어로 된 자료
 
 ## Outdated Reference
 - [x] [PyQt5 tutorial](https://build-system.fman.io/pyqt5-tutorial)
   - use fbs, pyqt5
 - [ ] [tutorial2](https://coderslegacy.com/python/pyqt5-tutorial/)
-- [ ] [PyQt5 korean](https://wikidocs.net/book/2944)
-
-- [Qt Designer Manual](https://doc.qt.io/qt-5/qtdesigner-manual.html)
