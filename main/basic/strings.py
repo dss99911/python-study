@@ -25,6 +25,11 @@ def float_or_none(text: str):
         return None
 
 
+def formatting():
+    print('What is your {0}?  It is {1}.'.format("name", "hyun"))
+    print(format(float("2.25e-05"), 'f'))
+
+
 # print new line
 print('C:\some\name')
 

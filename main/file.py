@@ -12,11 +12,10 @@ def read_file():
         print(line, end='')
 
 
-def read_file_with(file_path):
+def read_file_all(file_path):
     # with : after open, it's closed automatically
     with open(file_path) as f2:
-        read_data = f2.read()  # if size parameter is omitted, all content is read.
-        print(read_data)
+        return f2.read()  # if size parameter is omitted, all content is read.
 
 
 def list_files_name(path):

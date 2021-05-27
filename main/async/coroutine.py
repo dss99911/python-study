@@ -81,8 +81,12 @@ async def run_coroutine_in_thread():
     running coroutine in threads
     """
     await asyncio.gather(
-        asyncio.run_coroutine_threadsafe(_factorial("a", 1)),
+        asyncio.run_coroutine_threadsafe(_factorial("a", 1), create_event_loop()),
         asyncio.sleep(1))
+
+
+def create_event_loop():
+    return asyncio.new_event_loop()
 
 
 async def use_cancel():
