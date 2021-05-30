@@ -29,6 +29,8 @@ def formatting():
     print('What is your {0}?  It is {1}.'.format("name", "hyun"))
     print(format(float("2.25e-05"), 'f'))
 
+def startsWith(text: str):
+    return text.startswith("aa")
 
 # print new line
 print('C:\some\name')
