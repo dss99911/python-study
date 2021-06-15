@@ -35,6 +35,9 @@ def mkdir(file_path: str):
     if not path.exists(file_path):
         os.mkdir(file_path)
 
+def get_dir():
+    os.path.dirname(__file__)
+
 
 if __name__ == '__main__':
     print(list_files_path("./modules/"))
