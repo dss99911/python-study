@@ -1,4 +1,5 @@
 import logging
+from datetime import datetime
 
 
 def changeLevel():
@@ -10,6 +11,13 @@ def changeLevel():
 
 def writeOnFile():
     logging.basicConfig(filename="mylog.txt", level=logging.INFO)
+
+
+def writeOnFileWithFormat(logger):
+    _fh = logging.FileHandler('{:%Y-%m-%d}.log'.format(datetime.now()))
+    _formatter = logging.Formatter('%(asctime)s | %(levelname)-8s | %(lineno)04d | %(message)s')
+    _fh.setFormatter(_formatter)
+    logger.addHandler(_fh)
 
 
 def printLog():
