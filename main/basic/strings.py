@@ -1,3 +1,6 @@
+from datetime import datetime
+
+
 def strips():
     print("/sdf/".rstrip("/"))
     print("/sdf/".lstrip("/"))
@@ -28,6 +31,7 @@ def float_or_none(text: str):
 def formatting():
     print('What is your {0}?  It is {1}.'.format("name", "hyun"))
     print(format(float("2.25e-05"), 'f'))
+    print('log/{}{:%Y-%m-%d}.log'.format("dd", datetime.now()))
 
 def startsWith(text: str):
     return text.startswith("aa")

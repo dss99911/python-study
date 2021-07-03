@@ -1,5 +1,6 @@
 #  https://docs.python.org/3/tutorial/inputoutput.html#reading-and-writing-files
 import os
+import shutil
 from os import listdir, path
 from os.path import isfile, join
 from os import walk
@@ -33,11 +34,19 @@ def list_files_path(path: str):
 
 def mkdir(file_path: str):
     if not path.exists(file_path):
-        os.mkdir(file_path)
+        # os.mkdir(file_path)
+        os.makedirs(file_path)
 
 def get_dir():
     os.path.dirname(__file__)
 
 
+def remove_folder():
+    """
+    delete not empty folder
+    :return:
+    """
+    shutil.rmtree('folder_name', ignore_errors=True)
+
 if __name__ == '__main__':
-    print(list_files_path("./modules/"))
+    mkdir("a")

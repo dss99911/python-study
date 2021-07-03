@@ -1,7 +1,15 @@
 # dates are easily constructed and formatted
+import os
 from datetime import date, datetime, timedelta
+import pytz
+
+
 today = date.today() # this is same with now()
 now = datetime.now()
+
+def timezones():
+    os.environ['TZ'] = 'Asia/Seoul' #change system default timezone
+    datetime.now(tz=pytz.utc)
 date_jun_1 = datetime(2021, 6, 1)
 nine_hour = now + timedelta(hours=9)
 midnight = datetime(now.year, now.month, now.date())
