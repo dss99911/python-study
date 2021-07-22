@@ -106,3 +106,11 @@ def tuple_return():
 
 
 a1, a2, a3 = tuple_return()
+
+
+#%%
+
+def return_type_define()-> dict:
+    return {}
+
+

@@ -1,11 +1,16 @@
+import re
 from datetime import datetime
 
+#%%
 
 def strips():
     print("/sdf/".rstrip("/"))
     print("/sdf/".lstrip("/"))
     print("/sdf/".strip("/"))
+    print(" adsf ".strip())
 
+strips()
+#%%
 
 def split():
     a = "abc def\nadsf"
@@ -15,12 +20,15 @@ def split():
     a = a.split(",")
     print(a)
 
-
+#%%
 def replace():
     a = "abc 123".replace("1", "2")
     print(a)
+    a = re.sub(r'\d', '', a)
+    print(a)
 
-
+replace()
+#%%
 def float_or_none(text: str):
     try:
         return float(text)
@@ -35,6 +43,20 @@ def formatting():
 
 def startsWith(text: str):
     return text.startswith("aa")
+
+def contains():
+    return 'substring' in "any_string substring substring"
+
+#%%
+
+from difflib import SequenceMatcher
+def text_diff():
+    s = SequenceMatcher(lambda x: x == " ",
+                        "ABCDE",
+                        "ABEDE")
+    print(s.ratio())
+text_diff()
+#%%
 
 # print new line
 print('C:\some\name')
@@ -62,7 +84,7 @@ print('A'  # AB
 
 prefix = 'Py'
 print(prefix + 'thon')  # Concatenate variable and string literal
-
+#%%
 word = 'Python'
 print(word[0])  # 'P'
 print(word[-1])  # last character
@@ -70,7 +92,8 @@ print(word[0:2])  # characters from position 0 (included) to 2 (excluded)
 print(word[:2] + word[2:])  # Python
 
 len(word)  # size of word
-
+print(word[0:-1])
+#%%
 # Formatting https://docs.python.org/3/tutorial/inputoutput.html
 'What is your {0}?  It is {1}.'.format("name", "kim")
 'What is your {}?  It is {}.'.format("name", "kim")

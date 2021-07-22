@@ -7,6 +7,18 @@ def filter_():
 
     print(filtered_numbers)
 
+#%%
+def sort_():
+    text = ["aa", "b", "ccc"]
+    text.sort(key=len, reverse=True)
+    print(text)
+
+sort_()
+#%%
+def any_():
+    numbers = [1,2,3,4]
+    print(any(filter(lambda n: n > 2, numbers)))
+
 
 def merge_list():
     a = [1, 2, 3] + [4, 5, 6]
@@ -21,11 +33,14 @@ def zips():
     a_unzip, b_unzip = zip(*result)
     print(f"a = {a_unzip}, b = {b_unzip}")
 
+#%%
+def contains():
+    squares = [1, 4, 9, 16, 25]
 
-squares = [1, 4, 9, 16, 25]
-
-print(1 in squares)
-print(1 not in squares)
+    print(1 in squares)
+    print(10 not in squares)
+contains()
+#%%
 print(squares + [36, 49, 64, 81, 100])  # [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
 
 # Modify list
@@ -84,4 +99,4 @@ print([[row[i] for row in matrix] for i in range(4)])
 # transposed [[1, 5, 9], [2, 6, 10], [3, 7, 11], [4, 8, 12]]
 
 if __name__ == '__main__':
-    zips()
+    any_()

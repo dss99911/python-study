@@ -5,11 +5,14 @@ for w in words:
 
 
 # For with index
+#%%
 def for_index():
     a = ['Mary', 'had', 'a', 'little', 'lamb']
     for i in range(len(a)):
         print(i, a[i])
+    print(i)
 
+#%%
 
 def for_index_enumerate():
     for i, v in enumerate(['tic', 'tac', 'toe']):
