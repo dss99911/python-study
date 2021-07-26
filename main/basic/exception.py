@@ -24,3 +24,13 @@ raise ValueError("error")
 # create custom exception
 class CustomException(Exception):
     pass
+
+
+#%%
+
+from contextlib import suppress
+import os
+with suppress(FileNotFoundError):
+    os.remove("sadf")
+    print("apple") # this is not called
+print("bear")

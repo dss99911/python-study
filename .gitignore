@@ -1,3 +1,6 @@
 venv
 .idea
 python-study.iml
+dist
+build
+*.egg-info
