@@ -12,3 +12,8 @@ pip install -r requirements.txt
 ### note python version
 - for running project on same version, mention python version on README.md
 - because, library versions are mentioned on requirements.txt. but python version is not mentioned
+
+
+### create & activate venv
+python -m venv pyspark_venv
+source pyspark_venv/bin/activate

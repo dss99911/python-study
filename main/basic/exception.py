@@ -34,3 +34,19 @@ with suppress(FileNotFoundError):
     os.remove("sadf")
     print("apple") # this is not called
 print("bear")
+
+#%%
+
+import traceback
+
+def bb():
+    raise ValueError
+
+try:
+    bb()
+except ValueError:
+    tb = traceback.format_exc()
+else:
+    tb = "No error"
+finally:
+    print(tb)
