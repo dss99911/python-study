@@ -15,7 +15,7 @@ def send_slack_message(channel, message):
         print(f"Got an error: {e.response['error']}")
 
 def send_slack_file(channel, filename, content):
-    client = WebClient(token='xoxb-342485334516-SHfa8toTlNBTgqlfzdfmaIPA')
+    client = WebClient(token='{token}')
 
     try:
         return client.files_upload(
