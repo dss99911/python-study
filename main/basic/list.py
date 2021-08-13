@@ -7,6 +7,14 @@ def filter_():
 
     print(filtered_numbers)
 
+def map_():
+    numbers = [1, 2, 3, 4]
+    list(map(lambda n: n + 1, numbers))
+    print(list(map(lambda e: f"index {e[0]} : value {e[1]}", enumerate(numbers))))
+
+
+map_()
+
 #%%
 def sort_():
     text = ["aa", "b", "ccc"]
