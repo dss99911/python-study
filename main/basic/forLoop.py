@@ -48,5 +48,7 @@ while a < 10:
 while True:
     pass  # Busy-wait for keyboard interrupt (Ctrl+C)
 
-# for to array
-[f"test{i}" for i in [1, 2]]
+#%% # for to array
+arr = [f"test{i}" for i in [1, 2]]
+arrIf = [f"test{i}" for i in [1, 2] if i > 1]
+
