@@ -19,7 +19,8 @@ map_()
 def sort_():
     text = ["aa", "b", "ccc"]
     text.sort(key=len, reverse=True)
-    print(text)
+    text.sort(key=lambda a: 3 - len(a))
+    print(text[0:3])
 
 sort_()
 #%%
@@ -55,6 +56,8 @@ print(squares + [36, 49, 64, 81, 100])  # [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
 squares[1] = 5
 squares.append(5)  # append item
 squares.extend(squares)  # append list
+del squares[1] #remove by index
+squares.remove(5) # remove value
 squares[2:3] = [1, 2, 3, 4]  # Change 2-3 with the list
 squares[:] = []  # clear
 
@@ -80,7 +83,7 @@ print(tuple + tinytuple)  # Prints concatenated lists
 # (123, 'john', 123, 'john')
 # ('abcd', 786, 2.23, 'john', 70.200000000000003, 123, 'john')
 
-# Join List with separator
+# Join List with separator. Concatenate
 ",".join(map(lambda x: str(x), tuple))
 ','.join([str(q) for q in squares])
 

@@ -45,6 +45,7 @@ def bb():
 try:
     bb()
 except ValueError:
+    tb = traceback.print_exc(file=sys.stdout)
     tb = traceback.format_exc()
 else:
     tb = "No error"

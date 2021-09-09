@@ -10,7 +10,9 @@ print(sys.argv)  # python3 system.py 1 2 => ['system.py', '1', '2']
 
 print(dir(os))  # returns a list of all module functions
 help(os) # show help page
+#%%
 
+#%%
 # Shell util
 import shutil
 shutil.copyfile('data.db', 'archive.db')

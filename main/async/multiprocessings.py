@@ -3,7 +3,7 @@ from multiprocessing import Pool
 import time
 from multiprocessing import Process
 import multiprocessing as mp
-
+#%%
 
 # https://docs.python.org/3/library/multiprocessing.html
 
@@ -62,7 +62,7 @@ def _work(x):
     proc = mp.current_process()
     return f"{proc.name}, {proc.pid} work : {x}"
 
-
+#%%
 if __name__ == '__main__':
     show_current_process()
     spawn_process("sub1")
@@ -70,3 +70,16 @@ if __name__ == '__main__':
     print("this is called before sub process")
 
     use_pool()
+
+
+#%%
+from multiprocessing.context import Process
+def aa():
+    time.sleep(2)
+p = Process(name="test", target=aa)
+p.start()
+
+print(p.is_alive())
+
+time.sleep(3)
+print(p.is_alive())

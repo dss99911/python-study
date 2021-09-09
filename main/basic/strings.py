@@ -40,6 +40,8 @@ def formatting():
     print('What is your {0}?  It is {1}.'.format("name", "hyun"))
     print(format(float("2.25e-05"), 'f'))
     print('log/{}{:%Y-%m-%d}.log'.format("dd", datetime.now()))
+    a = 1123.232323
+    print(f"{a:.2f}") # 소수점 2번째까지만 출력
 
 def startsWith(text: str):
     return text.startswith("aa")
