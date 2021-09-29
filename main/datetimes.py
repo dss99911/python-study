@@ -19,6 +19,10 @@ now.strftime("%m-%d-%y. %d %b %Y is a %A on the %d day of %B.")  # '12-02-03. 02
 now.strftime("%y-%m-%d")  # '21-05-27
 now.strftime("%y-%m-%d %H:%M:%S")  # '21-05-27 07:06:01
 
+#%%
+datetime.now().strftime("%Y-%m-%d") # '2021-09-27'
+#%%
+
 date_time = datetime.strptime("2021-06-01", '%Y-%m-%d')
 
 # dates support calendar arithmetic

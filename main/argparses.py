@@ -3,6 +3,7 @@ import argparse
 parser = argparse.ArgumentParser()
 parser.add_argument("-d", "--decimal", dest="decimal", action="store")  # extra value
 parser.add_argument("-f", "--fast", dest="fast", action="store_true")  # existence/nonexistence
+parser.add_argument('--foobar', action='store_true')
 args = parser.parse_args()
 
 # python top.py --lines=5 alpha.txt beta.txt

@@ -49,6 +49,17 @@ def contains():
     print(1 in squares)
     print(10 not in squares)
 contains()
+
+#%%
+
+def named_tuple():
+    from collections import namedtuple
+    Bar = namedtuple('Bar', ['x', 'y'])
+    return Bar(x=2, y=2)
+
+print(named_tuple().x)
+
+
 #%%
 print(squares + [36, 49, 64, 81, 100])  # [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
 
