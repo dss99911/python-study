@@ -40,6 +40,8 @@ def mkdir(file_path: str):
 def get_dir():
     os.path.dirname(__file__)
 
+def is_dir():
+    os.path.isdir("path")
 
 def remove_folder():
     """
@@ -47,6 +49,9 @@ def remove_folder():
     :return:
     """
     shutil.rmtree('folder_name', ignore_errors=True)
+
+def remove_file():
+    os.remove("some_path")
 
 if __name__ == '__main__':
     mkdir("a")
