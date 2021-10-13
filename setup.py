@@ -5,9 +5,11 @@ from setuptools import setup, find_packages
 #   - env에 설치 : python setup.py install
 #   - source distribution(zip source on dist foloder) : python setup.py sdist
 #       - https://docs.python.org/3/distutils/sourcedist.html
-#   - build distribution : python setup.py bdist
+#   - build distribution :
+#       `python setup.py bdist` or `python setup.py bdist_egg` or `python setup.py bdist --formats=zip`
 #       - compress source code
 #       - make entrypoint shell script
+#       - bdist_egg를 하면, 압축 풀었을 때, 절대 경로의 폴더가 안나오고, python파일이 바로 나옴. 이 걸 쓰는게 좋을듯.
 
 setup_requires = [
     # setup.py 자신을 위해 필요한 패키지. ex) setuptools_git
