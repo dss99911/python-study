@@ -16,6 +16,18 @@ def map_():
 map_()
 
 #%%
+
+import itertools
+
+def flatmap():
+    list_of_lists = [[1, 2], [3, 4]]
+    print(sum(list_of_lists, []))
+    print(list(itertools.chain(*list_of_lists)))
+    print(list(itertools.chain.from_iterable(list_of_lists)))
+
+flatmap()
+
+#%%
 def sort_():
     text = ["aa", "b", "ccc"]
     text.sort(key=len, reverse=True)
