@@ -7,7 +7,7 @@ response.text
 # response.json()
 
 # %%
-
+# pip install html5lib
 html = requests.get("https://finance.naver.com/item/main.nhn?code=000660").text
 soup = BeautifulSoup(html, "html5lib")
 
