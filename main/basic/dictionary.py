@@ -19,10 +19,27 @@ def merge_dict():
     dict3 = dict1 | dict2 # pyton 3.9
     dict3 = {**dict1, **dict2}
 
+#%%
 #get or None
+
 if dict_.get('ddd') is None:
     print("dddd")
 
+# get or default value. but it doesn't set on dict
+abc = dict_.get("abc", "1")
+
+# default dict
+
+from collections import defaultdict
+def groupWords(words):
+    grouper = defaultdict(list)
+    # grouper = defaultdict(lambda : list()) # same with the upper line
+    for word in words:
+        length = len(word)
+        grouper[length].append(word)
+    return grouper
+
+#%%
 
 def delete_dict_item():
     del dict['one']  # remove entry with key 'one'

@@ -37,8 +37,15 @@ def mkdir(file_path: str):
         # os.mkdir(file_path)
         os.makedirs(file_path)
 
-def get_dir():
+
+def get_current_dir():
     os.path.dirname(__file__)
+
+
+def get_dir(file_path):
+    os.path.dirname(file_path)
+
+
 
 def is_dir():
     os.path.isdir("path")

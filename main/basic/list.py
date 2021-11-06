@@ -73,6 +73,7 @@ print(named_tuple().x)
 
 
 #%%
+squares = []
 print(squares + [36, 49, 64, 81, 100])  # [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
 
 # Modify list
@@ -87,17 +88,18 @@ squares[:] = []  # clear
 multiply_single_value = [5] * 10
 
 # tuple : similar with list but read-only
-tuple = 'abcd', 786, 2.23, 'john', 70.2
+tuple_ = 'abcd', 786, 2.23, 'john', 70.2
 tinytuple = (123, 'john')
-x, y, _, _, z = tuple  # ignore some value
-a, *_, b = tuple  # ignore some value
+x, y, _, _, z = tuple_  # ignore some value
+a, *_, b = tuple_  # ignore some value
 
-print(tuple)  # Prints complete list
-print(tuple[0])  # Prints first element of the list
-print(tuple[1:3])  # Prints elements starting from 2nd till 3rd
-print(tuple[2:])  # Prints elements starting from 3rd element
+print(tuple_)  # Prints complete list
+print(tuple_[0])  # Prints first element of the list
+print(tuple_[1:3])  # Prints elements starting from 2nd till 3rd
+print(tuple_[2:])  # Prints elements starting from 3rd element
 print(tinytuple * 2)  # Prints list two times
-print(tuple + tinytuple)  # Prints concatenated lists
+print(tuple_ + tinytuple)  # Prints concatenated lists
+print(type(tuple_) is tuple)
 
 # ('abcd', 786, 2.23, 'john', 70.200000000000003)
 # abcd
@@ -107,7 +109,7 @@ print(tuple + tinytuple)  # Prints concatenated lists
 # ('abcd', 786, 2.23, 'john', 70.200000000000003, 123, 'john')
 
 # Join List with separator. Concatenate
-",".join(map(lambda x: str(x), tuple))
+",".join(map(lambda x: str(x), tuple_))
 ','.join([str(q) for q in squares])
 
 from collections import deque
