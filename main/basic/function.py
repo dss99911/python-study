@@ -113,4 +113,10 @@ a1, a2, a3 = tuple_return()
 def return_type_define()-> dict:
     return {}
 
+#%% input args by list
 
+def print_arg(a, b, c):
+    print(f"{a},  {b}, {c}")
+
+arg = [1,2,3]
+print_arg(*arg)

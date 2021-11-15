@@ -9,7 +9,8 @@ except(AssertionError, TypeError):
     print("handle multiple error")
 except Exception as e:
     print(f"any Exception : {e}")
-    raise  # raise same error again after printing
+    raise ValueError("some error") from e  # exception chaining
+    # raise  # raise same error again after printing
 except :
     print(f"any Exception 2nd way without parameter")
 else:
