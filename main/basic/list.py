@@ -1,4 +1,7 @@
-def filter_():
+from typing import List
+
+
+def filter_(l: List[int]):
     numbers = [1, 2, 3, 4]
     def less_than_three(number): return number < 3
 

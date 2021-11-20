@@ -21,7 +21,7 @@ conda env create -f environment.yml
 ## etc
 ```shell
 # update conda version
- conda update -n base -c defaults conda
+conda update -n base -c defaults conda
 conda deactivate
 conda info --envs 
 conda env remove --name env-name

@@ -4,7 +4,12 @@ import shutil
 from os import listdir, path
 from os.path import isfile, join
 from os import walk
+import zipfile
 
+
+def copy_file(src, dst):
+    from shutil import copyfile
+    copyfile(src, dst)
 
 def read_file():
     f = open('workfile', 'r')
@@ -59,6 +64,42 @@ def remove_folder():
 
 def remove_file():
     os.remove("some_path")
+
+#%%
+import os
+import zipfile
+
+
+def zipdir(dir_path, zip_path, exclude: list = None):
+    zipf = zipfile.ZipFile(zip_path, 'w', zipfile.ZIP_DEFLATED)
+
+    # ziph is zipfile handle
+
+    def is_exclude(p):
+        if exclude is None:
+            return False
+        for e in exclude:
+            if p.startswith(e):
+                print(f"exclude {apath}")
+                return True
+        return False
+
+    for root, dirs, files in os.walk(dir_path):
+        if is_exclude(root):
+            continue
+
+        for file in files:
+            apath = os.path.join(root, file)
+            if is_exclude(apath):
+                continue
+
+            zipf.write(apath, os.path.relpath(apath, os.path.join(dir_path, '..')))
+
+    zipf.close()
+
+
+zipdir(".", "python.zip", exclude=["./python.zip"])
+#%%
 
 if __name__ == '__main__':
     mkdir("a")

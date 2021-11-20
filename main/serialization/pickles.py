@@ -3,8 +3,8 @@ import pickle
 
 
 obj = [1,2,3]
-f = open('main/serialization/obj.pkl', 'wb')
-pickle.dump(obj, f)
+with open('main/serialization/obj.pkl', 'wb') as f:
+    pickle.dump(obj, f)
 #%%
 
 obj2 = pickle.load(open("main/serialization/obj.pkl", 'rb'))
