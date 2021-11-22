@@ -19,6 +19,10 @@ def merge_dict():
     dict3 = dict1 | dict2 # pyton 3.9
     dict3 = {**dict1, **dict2}
 
+def map_dict(f, d):
+    return {k: f(v) for k, v in d.items()}
+
+
 #%%
 #get or None
 
