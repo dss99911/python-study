@@ -40,7 +40,11 @@ def var_args(*args):
     """Define function later with"""
     pass  # TODO : Remember to implement this!
 
+#%%
+def get_parameters_dict(a, b, c):
+    print(locals())  # {'a': 1, 'b': 2, 'c': 3}
 
+#%%
 # function can be set on other variable
 a = var_args
 a("1")

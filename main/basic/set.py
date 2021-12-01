@@ -4,6 +4,6 @@ b = set('alacazam')
 a - b  # {'r', 'd', 'b'}
 a | b  # {'a', 'c', 'r', 'd', 'b', 'm', 'z', 'l'}
 a & b  # {'a', 'c'}
-a ^ b  # {'r', 'd', 'b', 'm', 'z', 'l'}
+a ^ b  # {'r', 'd', 'b', 'm', 'z', 'l'}  # symmetric_difference
 
 a = {x for x in 'abracadabra' if x not in 'abc'}  # {'r', 'd'}

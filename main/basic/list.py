@@ -15,8 +15,11 @@ def map_():
     list(map(lambda n: n + 1, numbers))
     print(list(map(lambda e: f"index {e[0]} : value {e[1]}", enumerate(numbers))))
 
-
-map_()
+def zip_():
+    numbers = [1, 2, 3, 4]
+    numbers2 = [5, 6, 7, 8]
+    for n, n2 in zip(numbers, numbers2):
+        print(f"{n}.{n2}")
 
 #%%
 
