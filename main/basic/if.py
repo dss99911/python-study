@@ -22,6 +22,16 @@ else:
 def ternary_operator():
     return "success" if (b) else "fail"
 
+def get_or():
+    a = [1]
+    print(a or 2)  # [1]
+    a = []
+    print(a or 2)  # 2
+    a = None
+    print(a or 2)  # 2
+    a = 0
+    print(a or 2)  # 2
+
 
 if __name__ == '__main__':
     print(ternary_operator())

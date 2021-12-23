@@ -98,6 +98,9 @@ tuple_ = 'abcd', 786, 2.23, 'john', 70.2
 tinytuple = (123, 'john')
 x, y, _, _, z = tuple_  # ignore some value
 a, *_, b = tuple_  # ignore some value
+a,b,c = [1,2,3]
+
+#%%
 
 print(tuple_)  # Prints complete list
 print(tuple_[0])  # Prints first element of the list

@@ -7,7 +7,7 @@ class NothingTodo:
 
 class Complex:
     a = 1
-
+    b = []  # 여기에 빈 array를 생성하게 되면, 해당 클래스는 각 object가 같은 array를 참조하게 됨. init에서 생성해줘야 함.
     def __init__(self, realpart, imagpart):
         self.r = realpart
         self.i = imagpart
@@ -26,6 +26,10 @@ class Complex:
 
     # private
     def _ab(self):
+        pass
+
+    @staticmethod
+    def static_method(a: "Complex"):
         pass
 
 

@@ -52,3 +52,9 @@ while True:
 arr = [f"test{i}" for i in [1, 2]]
 arrIf = [f"test{i}" for i in [1, 2] if i > 1]
 
+#%% for two array by zip
+a = [1,2,3]
+b = [1,2,3]
+
+for c, d in zip(a,b):
+    print(c,d)

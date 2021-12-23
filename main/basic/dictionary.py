@@ -26,6 +26,20 @@ def map_dict(f, d):
     return {k: f(v) for k, v in d.items()}
 
 
+def multiple_for_loop_to_dict():
+    a = [1,2,3]
+    b = [4,5,6]
+    result = {
+        i: {
+            j: i + j
+            for j in b
+        }
+      for i in a
+    }
+
+    print(result)
+
+
 # %%
 # get or None
 

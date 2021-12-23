@@ -100,6 +100,10 @@ def zipdir(dir_path, zip_path, exclude: list = None):
 
 zipdir(".", "python.zip", exclude=["./python.zip"])
 #%%
+# "a/b" 를 안하고, join을 쓰는 이유는 windows와 mac등 다른 플랫폼에서도 가능하게 하기 위한 것 일듯.
+os.path.join("a", "b")
+
+#%%
 
 if __name__ == '__main__':
     mkdir("a")
