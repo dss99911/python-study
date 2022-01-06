@@ -1,4 +1,6 @@
 # assigning
+import numbers
+
 counter = 100  # An integer assignment
 miles = 1000.0  # A floating point
 name = "John"  # A string
@@ -33,4 +35,9 @@ def accessGlobalVariable():
 # show global or local variables
 globals()
 locals()
-
+#%%
+import numbers
+# 변수가 class인지 체크
+print(isinstance(int, type))
+print(issubclass(int, numbers.Number))
+#%%

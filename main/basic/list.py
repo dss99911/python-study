@@ -99,6 +99,7 @@ tinytuple = (123, 'john')
 x, y, _, _, z = tuple_  # ignore some value
 a, *_, b = tuple_  # ignore some value
 a,b,c = [1,2,3]
+(a,b),(c,d) = [[1,2],[3,4]]
 
 #%%
 
