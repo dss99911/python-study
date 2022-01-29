@@ -14,14 +14,21 @@ def copy_dict():
     dict_.copy()
     dict(dict_)
 
-
+#%%
 def merge_dict():
-    dict1 = {"a": 1}
-    dict2 = {"b": 2}
+    dict1 = {"a": 1, "c": 3}
+    dict2 = {"b": 2, "c": 4}
     dict3 = dict1 | dict2  # pyton 3.9
+    print(dict3)
     dict3 = {**dict1, **dict2}
+    print(dict3)
+
+    ##기존 dict에 반영할 때.
+    dict1.update(dict2)
+    print(dict1)
 
 
+#%%
 def map_dict(f, d):
     return {k: f(v) for k, v in d.items()}
 
@@ -97,6 +104,7 @@ print_cache_multiple_creation()
 # Zip
 questions = ['name', 'quest', 'favorite color']
 answers = ['lancelot', 'the holy grail', 'blue']
+dict(zip(questions, answers))  # dict로 변환
 for q, a in zip(questions, answers):
     print('What is your {0}?  It is {1}.'.format(q, a))
 
