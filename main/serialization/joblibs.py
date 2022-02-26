@@ -1,9 +1,10 @@
 import joblib
 # 주로, 객체를 압축하여 저장 및 로드를 사용.
+# joblib이 읽어들이는 속도가 빠르고 pd.dataframe 객체 자체를 변경 없이 저장
 # 그외, memory캐시와, parallel지원 함.
 
 # pickle과 비교
-# pickle이 3.8버전부터는 large numpy array에도 더 빠르다는 것 같음.
+# pickle이 3.8버전부터는 large numpy array에도 더 빠르다는 것 같음. (그런데, 현재, python 버전이 3.7버전임)
 # joblib을 쓰는 경우는 memory캐시나 parallel을 사용하는 경우에만 사용.. 하지만, 어떤 식으로 사용하는지 잘 모름.
 
 lst = [('text', [1, 2, 3])]

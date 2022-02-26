@@ -1,9 +1,10 @@
 # https://pypi.org/project/slackclient/
 # pip install slack_sdk
-from slack_sdk import WebClient
-from slack_sdk.errors import SlackApiError
+
 
 def send_slack_message(channel, message):
+    from slack_sdk import WebClient
+    from slack_sdk.errors import SlackApiError
     client = WebClient(token='{token}')
 
     try:
@@ -14,7 +15,18 @@ def send_slack_message(channel, message):
         # You will get a SlackApiError if "ok" is False
         print(f"Got an error: {e.response['error']}")
 
+
+def send_slack_message_to_url(text, url="https://hooks.slack.com/services/00000/000000"):
+    import requests
+    payload = {
+        "text": text
+    }
+    requests.post(url, json=payload)
+
+
 def send_slack_file(channel, filename, content):
+    from slack_sdk import WebClient
+    from slack_sdk.errors import SlackApiError
     client = WebClient(token='{token}')
 
     try:

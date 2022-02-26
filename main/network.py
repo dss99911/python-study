@@ -10,6 +10,10 @@ with urlopen('http://tycho.usno.navy.mil/cgi-bin/timer.pl') as response:
             print(line)
 
 
+def download_file(url, file_path):
+    file = requests.get(url, allow_redirects=True)
+    open(file_path, 'wb').write(file.content)
+
 
 def post_call():
     url = "https://somepage.com"

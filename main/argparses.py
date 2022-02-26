@@ -4,7 +4,11 @@ parser = argparse.ArgumentParser()
 parser.add_argument("-d", "--decimal", dest="decimal", action="store")  # extra value
 parser.add_argument("-f", "--fast", dest="fast", action="store_true")  # existence/nonexistence
 parser.add_argument('--foobar', action='store_true')
-args = parser.parse_args()
+args = parser.parse_args() # if there is not added arguments, then occurs error
+args, _ = parser.parse_known_args()  # ignore not added arguments
+
+getattr(args, "port")
+args.port
 
 # python top.py --lines=5 alpha.txt beta.txt
 parser = argparse.ArgumentParser(prog = 'top',
