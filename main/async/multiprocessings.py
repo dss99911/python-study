@@ -74,9 +74,9 @@ if __name__ == '__main__':
 
 #%%
 from multiprocessing.context import Process
-def aa():
-    time.sleep(2)
-p = Process(name="test", target=aa)
+def aa(s):
+    time.sleep(s)
+p = Process(name="test", target=aa, daemon=True, args=(1, ))
 p.start()
 
 print(p.is_alive())
