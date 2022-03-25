@@ -22,3 +22,10 @@ class ColorAuto(Enum):
 result = list(map(lambda c: c.name, ColorAuto))
 
 #%%
+
+from enum import IntEnum
+
+Weekdays = IntEnum('Weekdays', 'sun mon tue wed thu fri sat', start=0)
+weekday == Weekdays.wed
+weekday_enum = Weekdays(weekday)
+SUN, MON, TUE, WED, THU, FRI, SAT = range(7)

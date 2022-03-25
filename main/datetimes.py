@@ -36,3 +36,7 @@ age.days  # 14368
 # milliseconds to date
 ms = 0
 dt = datetime.fromtimestamp(ms/1000)
+
+# datetime to seconds
+import time
+time.mktime(now.timetuple())

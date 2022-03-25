@@ -1,3 +1,5 @@
+from typing import Union
+
 def print_me(text):
     """This prints a passed string into this function"""
     print(text)
@@ -20,6 +22,10 @@ def with_type_str(name: str):
 
 
 def with_type_dict(name: dict):
+    print(name)
+
+
+def with_several_type(name: Union[str, dict]):
     print(name)
 
 

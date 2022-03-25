@@ -38,6 +38,7 @@ def sort_():
     text = ["aa", "b", "ccc"]
     text.sort(key=len, reverse=True)
     text.sort(key=lambda a: 3 - len(a))
+    text = sorted(text, key=lambda a: 3 - len(a))
     print(text[0:3])
 
 sort_()
