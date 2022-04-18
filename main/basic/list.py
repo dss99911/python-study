@@ -23,6 +23,9 @@ def zip_():
 
 #%%
 
+def find_index(list, item):
+    list.index(item)
+
 import itertools
 
 def flatmap():
