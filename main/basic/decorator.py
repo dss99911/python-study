@@ -67,7 +67,7 @@ def cols_required(cols: List[str], index=0):
         return decorated_function
     return col_required_decorator
 
-def cols_returns(cols: List[str], index=0):
+def cols_return(cols: List[str], index=0):
     def col_required_decorator(f):
         @wraps(f)
         def decorated_function(*args, **kwargs):
