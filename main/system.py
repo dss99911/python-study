@@ -21,3 +21,14 @@ shutil.move('/build/executables', 'installdir')
 import glob
 print(glob.glob('*.py')) # show files with .py
 
+#%%
+# get output
+import subprocess
+
+batcmd="dir"
+result = subprocess.check_output(batcmd, shell=True)
+
+#%%
+# Linux or Darwin (Mac OS X)
+import platform
+platform.system()

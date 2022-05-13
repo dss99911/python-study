@@ -10,6 +10,16 @@ def filter_(l: List[int]):
 
     print(filtered_numbers)
 
+
+def sub_list(l):
+    l[1:3] # inclusive, exclusive
+    l[:3]
+    l[:] # all
+    l[::-1] # increase by the number. so, this is inverse way [5,4,3,2,1]
+    l[::1] # same with l. increase by 1 [1,2,3,4,5]
+    l[::2] # same with l. increase by 2 [1, 3, 5]
+
+
 def map_():
     numbers = [1, 2, 3, 4]
     list(map(lambda n: n + 1, numbers))
