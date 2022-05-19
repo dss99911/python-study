@@ -16,6 +16,18 @@ def send_slack_message(channel, message):
         print(f"Got an error: {e.response['error']}")
 
 
+def send_slack_message(text):
+
+    import requests
+    payload = {
+        "text": text,
+        "token": '{token}',
+        "channel": "#channel_name"
+    }
+    # noinspection PyTypeChecker
+    requests.post("https://slack.com/api/chat.postMessage", json=payload)
+
+
 def send_slack_message_to_url(text, url="https://hooks.slack.com/services/00000/000000"):
     import requests
     payload = {
@@ -38,3 +50,19 @@ def send_slack_file(channel, filename, content):
     except SlackApiError as e:
         # You will get a SlackApiError if "ok" is False
         print(f"Got an error: {e.response['error']}")
+
+
+def send_slack_file_requests(title, file_path):
+    import requests
+    files = {
+        'file': (file_path, open(file_path, 'rb'), 'text')
+    }
+
+    payload = {
+        "title": title,
+        "token": '{token}',
+        "channel": "#channel_name"
+    }
+
+    r = requests.post("https://slack.com/api/files.upload", params=payload, files=files)
+    print(r)
