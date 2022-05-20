@@ -22,3 +22,7 @@ a = print(4, 4, 5, key='value') # return "ddf"
 print.assert_has_calls([call(3, 4, 5, key='value'), call(4, 4, 5, key='value')])
 
 #%%
+
+# tox
+# - 다른 파이썬 버전등 다른 환경에서 테스트할 때.
+# http://corecode.pe.kr/2018/01/18/python_tox/
