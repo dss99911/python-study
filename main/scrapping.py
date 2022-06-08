@@ -1,6 +1,6 @@
 import requests
 from bs4 import BeautifulSoup
-
+#pip install beautifulsoup4
 url = "http://www.naver.com"
 response = requests.get(url)
 response.text
