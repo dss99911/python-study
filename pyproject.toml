@@ -1,0 +1,26 @@
+# https://packaging.python.org/en/latest/tutorials/packaging-projects/#generating-distribution-archives
+# use twine to upload
+# use setuptools for building
+# for building and install whell, refer script/build_install_local.sh
+
+[build-system]
+requires = ["setuptools>=63.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "python_study"
+version = "0.0.1"
+authors = [
+    { name="hyun", email="hyun@example.com" },
+]
+description = "hyun python utils"
+readme = "README.md"
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/dss99911/python-study.git"
+"Bug Tracker" = "https://github.com/dss99911/python-study"

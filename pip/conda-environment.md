@@ -1,3 +1,5 @@
+# install conda
+- https://docs.anaconda.com/anaconda/install/mac-os/
 
 # create new conda env
 ```shell

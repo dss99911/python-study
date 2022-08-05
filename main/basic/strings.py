@@ -42,6 +42,7 @@ def formatting():
     print('log/{}{:%Y-%m-%d}.log'.format("dd", datetime.now()))
     a = 1123.232323
     print(f"{a:.2f}") # 소수점 2번째까지만 출력
+    print(f"loss: {1:>7f}  [{123213213:>5d}/{2323:>5d}]") # 1.000000  123213213/ 2323
 
 def startsWith(text: str):
     return text.startswith("aa")

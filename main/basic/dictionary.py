@@ -2,12 +2,16 @@ dict_ = {}  # underscore at last is convention
 dict_['one'] = "This is one"
 dict_[2] = "This is two"
 dict2 = {'one': "This is one", 2: "This is two"}
+dict3 = dict(one="This is one", two="This is two")
+
 a = dict([('sape', 4139), ('guido', 4127), ('jack', 4098)])  # make dict
 
 print(dict_.keys())  # Prints all the keys
 print(dict_.values())  # Prints all the values
 
 list(dict_)  # ['one', 2]
+
+
 
 
 def copy_dict():

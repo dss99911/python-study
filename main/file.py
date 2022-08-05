@@ -97,8 +97,13 @@ def zipdir(dir_path, zip_path, exclude: list = None):
 
     zipf.close()
 
-
 zipdir(".", "python.zip", exclude=["./python.zip"])
+
+def unzip(zip_path, dir_path):
+    import zipfile
+    with zipfile.ZipFile(zip_path, 'r') as zip_ref:
+        zip_ref.extractall(dir_path)
+
 #%%
 # "a/b" 를 안하고, join을 쓰는 이유는 windows와 mac등 다른 플랫폼에서도 가능하게 하기 위한 것 일듯.
 os.path.join("a", "b")

@@ -29,3 +29,22 @@ tags = soup.select("div.b8cIId.ReQCgd.Q9MA7b > a")
 # use tag.contents for access inner tags
 result = [(tag["href"].split("=")[1], tag.contents[0].text) for tag in tags]
 #%%
+
+
+import requests
+from bs4 import BeautifulSoup, element
+
+html = requests.get("https://aws.amazon.com/ec2/instance-types/").text
+soup = BeautifulSoup(html, "html5lib")
+tags = soup.select("li.lb-tabs-content-item.lb-comp-content-container.lb-visibility-change.lb-active > div > div.lb-tbl.lb-tbl-p.lb-tbl-header-centered > table > tbody > tr")
+#%%
+
+def instance_type_value(tr):
+    c = [td for td in tr.children if type(td) == element.Tag]
+    instance_type = c[0].contents[0].text
+    cpu = c[1].contents[0].text
+    memory = c[2].contents[0].text
+    return (instance_type, f"cpu {cpu}, memory {memory}")
+
+res = [instance_type_value(tr) for tr in tags]
+res = {r[0]: r[1] for r in res if r[0] not in ["Instance Size", "Instance"]}

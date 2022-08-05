@@ -160,3 +160,10 @@ print([[row[i] for row in matrix] for i in range(4)])
 
 if __name__ == '__main__':
     any_()
+
+
+def split():
+    def chunks(lst, n):
+        return [lst[i:i + n] for i in range(0, len(lst), n)]
+    chunks([1,2,3,4,5], 2) # [1,2],[3,4],[5]
+    
