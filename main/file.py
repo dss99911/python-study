@@ -17,6 +17,15 @@ def read_file():
     for line in f:  # read each line in for
         print(line, end='')
 
+def read_str_from_file(path):
+    with open(path, "r") as f:
+        return f.read()
+
+
+def write_file():
+    with open("Output.txt", "w") as text_file:
+        text_file.write("code")
+
 
 def read_file_all(file_path):
     # with : after open, it's closed automatically
