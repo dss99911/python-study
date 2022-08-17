@@ -25,3 +25,6 @@ result = []
 for r in regex:
     result.append(re.search(r,st))
 
+#%% extract regex
+html = "<html><title>name</title></html>"
+title_search = re.search('<title>(.*)</title>', html, re.IGNORECASE)
