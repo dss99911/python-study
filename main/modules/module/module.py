@@ -29,3 +29,14 @@ if __name__ == "__main__":
 
 # shows member field or functions of the imported module
 dir(f2)
+
+
+def python_paths():
+    import sys
+    sys.path  # path list
+
+
+def module_path():
+    import os
+    import fibo
+    abspath = os.path.abspath(fibo.__file__)
