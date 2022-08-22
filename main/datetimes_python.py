@@ -10,6 +10,8 @@ now = datetime.now()
 def timezones():
     os.environ['TZ'] = 'Asia/Seoul' #change system default timezone
     datetime.now(tz=pytz.utc)
+    datetime.now(tz=pytz.timezone('Asia/Seoul'))
+
 date_jun_1 = datetime(2021, 6, 1)
 nine_hour = now + timedelta(hours=9)
 midnight = datetime(now.year, now.month, now.date())
