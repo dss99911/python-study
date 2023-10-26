@@ -120,3 +120,8 @@ def run_masic_method():
     m()  # call __call__
     m.data  # call __getattribute__
     print(m)  # call __str__
+
+
+def data_class():
+    # https://www.daleseo.com/python-dataclasses/
+    pass

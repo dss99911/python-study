@@ -1,0 +1,20 @@
+
+- python의 경우, GIL이라는 거에 의해, 하나의 python process는 하나의 cpu core밖에 사용 못함. 그래서, gunicorn같은 경우, 다중 코어를 사용하기 위해서, work process를 여러개 띄워서 사용함.
+- 그래서, thread를 사용할 경우, concurrent한 처리는 가능하지만, 단일 core에서 동작하는 것임
+- 이런 상황에서 thread가 많으면, 지속적인 context switching이 일어나서, 비효율적이게 됨
+- 여기에서, coroutine이라는 OS단이 아닌, application단에서 경량화된 thread를 제공하여, (gevent의 경우, greenlet이라고 부름) 여기에서 단일 thread에서 처리함
+- I/O, Network 요청의 경우, 오랜 시간이 걸리는데, 이 경우에 결과가 나올 때까지 대기 타지 않고, 다른 greenlet의 처리를 이어서 진행함.
+- 결국, context switching없이 대기 타는 시간이 없어져서, 불필요한 overhead가 줄어듬.
+- 그런데, 이렇게 처리해주기 위해서는 일반적으로 I/O, Network library에서 coroutine을 지원 해야 하고, 개발자들이 라이브러리 반영 및, 사용할 때도 coroutine에 대한 충분한 이해를 가지고 사용해야 함.
+- 잘못 사용할 경우, 단일 thread인 만큼, async하지 않은 blocking code가 있을 경우, 병렬 처리가 안되서, 더 오랜 시간이 걸림
+- 그런데, gevent의 경우, python이 interpreter방식인 것을 적극 활용하여, 기존 request, i/o, thread, time.sleep등의 일반적인 함수를 coroutine에 맞게 자동으로 패칭 시켜주는 monkey patching이라는 것을 지원함.
+- 그래서, 저희가 개발할 때, 일반적인 library를 사용하는 거라면, coroutine을 고려하지 않고 개발해도 별 문제 없음.
+- 그런데, coroutine에 대한 설명 중, 그러면, I/O 나 network에서 대기 탈 때, 대기타고 결과값이 왔다는 것을 어떻게 감지해서 하는지에 대한 설명은 찾기 쉽지 않아서, 잘 모름(별도 thread를 둬서, 지속적으로 확인하는 걸 수도 있고, 구체적인 것은 좀더 공부가 필요할 것 같아요)
+  - I/O stream이나 network socket 생성시, OS단에서 처리를 할 텐데,
+  - OS에서 처리가 완료 되면, 상태값을 변경 해주고, 그것을 event loop에서 상태값이 완료가 되면, 다음 처리가 진행 되는 것 같네요.
+  - 그런데, OS단에서 처리가 완료됐는지 상태 체크를 코드단에서 어떻게 확인 하는 건지 구체적인 자료는 찾기 어렵네요. 대충 이 정도로만 이해해야 할 것 같아요.
+  - 어쨌든, process 단에서는 단일 스레드로 돌아가는 것 같네요. 
+- https://github.com/python/cpython/blob/3.8/Lib/asyncio/base_events.py#L1823
+  - coroutine이 event loop에 추가된 task들을 지속적으로 처리함.
+  - 시간이 걸리는 작업을 할 때, kernel에 요청만 하고, 다른 작업 진행,
+  - 위에 코드에서 kernel에서 완료된 event가 있는지 매 task 처리할 때마다, 확인함. 있으면, 해당 event이후 코드를 수행하고, 없으면, 다음 task를 진행.

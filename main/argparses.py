@@ -1,6 +1,7 @@
 import argparse
 # args parser https://docs.python.org/3/tutorial/stdlib.html#command-line-arguments
 parser = argparse.ArgumentParser()
+parser.add_argument("--port", type=int)  # dest is port
 parser.add_argument("-d", "--decimal", dest="decimal", action="store")  # extra value
 parser.add_argument("-f", "--fast", dest="fast", action="store_true")  # existence/nonexistence
 parser.add_argument('--foobar', action='store_true')
